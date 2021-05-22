@@ -4,15 +4,20 @@
     <meta charset="utf-8">
     <title>Eth Gas Price Checker</title>
     <link rel="icon" href="../icon.png" type="image/icon type">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="ETHgas_style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
   </head>
   <body>
     <script src="gasnowAPI.js"></script>
     <h1 class="header">Eth Gas Prices (Gwei)</h1>
-    <ul id="gasPrice">
-    </ul>
+    <div id="wrapper">
+      <div class="gasPrice" id="gasRapid"><span class="gasText">Rapid</span></div>
+      <div class="gasPrice" id="gasFast"><span class="gasText">Fast</span></div>
+      <div class="gasPrice" id="gasStandard"><span class="gasText">Standard</span></div>
+      <div class="gasPrice" id="gasSlow"><span class="gasText">Slow</span></div>
+    </div>
+
 
     <a href="../index.html">Go Back</a>
   </body>

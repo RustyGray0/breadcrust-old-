@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Fruit List</title>
+    <link rel="icon" href="../icon.png" type="image/icon type">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1 class="header">Fruits</h1>
+    <ul id="fruitList">
+    </ul>
+
+    <div id="input">
+      <input type="text" id="inputName" placeholder="Fruit Name"><br>
+      <input type="text" id="inputColor" placeholder="Fruit Color"><br>
+      <input type="text" id="inputWeight" placeholder="Fruit Weight"><br>
+      <button type="button" id="btn">Add to list</button>
+    </div>
+
+    <script>
+      var fruits = [{name:"Apple", color:"Red", weight:100},
+                    {name:"Banana", color:"Yellow", weight:118}];
+
+    function refresh(){
+      var list = $("#fruitList");
+      list.html("");
+
+      $.each(fruits,function(index,value){
+      $("<li/>").text(value.name+", "+value.color+", "+value.weight+"g").appendTo(list);
+
+      });
+    }
+
+    refresh()
+
+    $("#btn").click(function() {
+      var getName = $("#inputName").val();
+      var getColor = $("#inputColor").val();
+      var getWeight = $("#inputWeight").val();
+      var get = {name:getName, color:getColor, weight:getWeight};
+      fruits.push(get);
+      refresh()
+    });
+
+    </script>
+
+    <br><a href="../index.html">Go Back</a>
+
+  </body>
+</html>

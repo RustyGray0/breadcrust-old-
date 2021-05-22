@@ -10,11 +10,12 @@ body {
 }
 
 .gasPrice {
-  background-color: gray;
+  background-color: #6b7177;
   margin: auto;
   height: 200px;
   width: 200px;
   border-radius: 50%;
+  border: solid #165899;
 }
 
 .gasPrice span {

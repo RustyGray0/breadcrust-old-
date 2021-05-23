@@ -3,7 +3,7 @@ function refresh(){
     url:  "https://www.gasnow.org/api/v3/gas/price?utm_source=:test",
     type: "GET",
     success: function(result){
-      $(".gasPrice").children().not(".gasText").html("");
+      $(".gasPrice").children().not(".gasText").remove();
       $("<span/>").text(Math.round(result.data.rapid/1000000000)).appendTo($("#gasRapid"));
       $("<span/>").text(Math.round(result.data.fast/1000000000)).appendTo($("#gasFast"));
       $("<span/>").text(Math.round(result.data.standard/1000000000)).appendTo($("#gasStandard"));
